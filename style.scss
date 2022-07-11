@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* css.gg */
+@import url("https://css.gg/css");
+/* UNPKG */
+@import url("https://unpkg.com/css.gg/icons/all.css");
+/* JSDelivr */
+@import url("https://cdn.jsdelivr.net/npm/css.gg/icons/all.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  color: #e5dfe1;
+}
+
+body {
+  background-color: #1b262a;
+  overflow: hidden;
+
+  .main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    flex-direction: row;
+
+    .lside,
+    .rside {
+      width: 50%;
+      height: 80%;
+    }
+
+    .lside {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      flex-direction: column;
+      padding: 50px;
+
+      h1 {
+        font-weight: 600;
+        transform: translateX(-150%);
+        opacity: 0;
+        transition: 0.5s all ease-out;
+
+        span {
+          color: #713f5b;
+        }
+      }
+
+      img {
+        width: 40vw;
+        transform: translateX(-150%);
+        opacity: 0;
+        transition: 0.5s all ease-out;
+      }
+    }
+
+    .rside {
+      padding: 0 40px;
+
+      .form {
+        width: 100%;
+        height: 40%;
+        margin: 55% 0;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+      }
+
+      .name {
+        grid-area: 1 / 1 / 2 / 3;
+        transform: translateY(-15px);
+        transition: 0.5s all ease-out;
+        opacity: 0;
+      }
+
+      .surname {
+        grid-area: 1 / 3 / 2 / 5;
+        transform: translateY(-15px);
+        transition: 0.5s all ease-out;
+        opacity: 0;
+      }
+
+      .email {
+        grid-area: 2 / 1 / 3 / 5;
+        transform: translateY(-15px);
+        transition: 0.5s all ease-out;
+        opacity: 0;
+      }
+
+      .password {
+        grid-area: 3 / 1 / 4 / 5;
+        transform: translateY(-15px);
+        transition: 0.5s all ease-out;
+        opacity: 0;
+      }
+
+      .confirm {
+        grid-area: 4 / 1 / 5 / 5;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          all: unset;
+          width: 47%;
+          height: 45px;
+
+          border-radius: 7px;
+          background-color: #6a3c56;
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          margin-right: 15px;
+          box-shadow: #4f2a3f 0px 4px 30px;
+
+          transform: translateY(-15px);
+          transition: 0.5s all ease-out;
+          opacity: 0;
+
+          &:hover {
+            background-color: #4f2a3f;
+            transform: translateY(-2px);
+
+            &:first-child {
+              background-color: #6d7c7d;
+            }
+          }
+
+          &:first-child {
+            background-color: #8c9c9d;
+            box-shadow: #8c9c9d57 0px 4px 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.inpbox {
+  width: calc(100% - 15px);
+  height: 50px;
+  display: flex;
+
+  margin: 0 0 15px 0;
+
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+
+  background-color: #8c9c9d41;
+
+  padding: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  div {
+    i {
+      color: #ffffff;
+    }
+  }
+
+  div {
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+
+      span {
+        width: 90%;
+
+        color: #868787;
+        font-weight: 400;
+        font-size: 0.9rem;
+
+        text-shadow: 1px 1px 3px #333;
+        transition: 0.1s all linear;
+      }
+
+      input {
+        all: unset;
+        font-size: 0.8rem;
+        width: 90%;
+
+        height: 0px;
+        transition: 0.1s all linear;
+      }
+    }
+  }
+}
+
+@keyframes invalid {
+  0% {
+    transform: translateX(7px);
+  }
+  20% {
+    transform: translateX(-7px);
+  }
+  40% {
+    transform: translateX(7px);
+  }
+  60% {
+    transform: translateX(-7px);
+  }
+  80% {
+    transform: translateX(7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
